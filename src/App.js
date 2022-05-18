@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 // api key from open weather
-const API_KEY = process.env.REACT_WEATHER_API_KEY
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
 function App() {
   const [data, setData] = useState({})
@@ -15,7 +15,7 @@ function App() {
       axios.get(url)
         .then((response) => {
           setData(response.data)
-          console.log(response.data);
+          // console.log(response.data);
         })
       setLocation('')
     }
